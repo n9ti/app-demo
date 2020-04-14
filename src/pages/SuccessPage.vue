@@ -3,7 +3,7 @@
     <header>
       <h1>Success</h1>
       <h1>Thank you</h1>
-      <a href="https://k2sor.csb.app/">
+      <a href="https://ga-landing.netlify.com/">
         <b>Back to Landing Page</b>
       </a>
     </header>
