@@ -24,6 +24,11 @@ const routes = [
   },
 ];
 
+const router = new VueRouter({
+  mode: "history",
+  routes,
+});
+
 router.beforeEach((to, from, next) => {
   // This goes through the matched routes from last to first, finding the closest route with a title.
   // eg. if we have /some/deep/nested/route and /some, /deep, and /nested have titles, nested's will be chosen.
@@ -34,10 +39,6 @@ router.beforeEach((to, from, next) => {
 
   // Find the nearest route element with meta tags.
   const nearestWithMeta = to.matched
-    .slice()
-    .reverse()
-    .find((r) => r.meta && r.meta.metaTags);
-  const previousNearestWithMeta = from.matched
     .slice()
     .reverse()
     .find((r) => r.meta && r.meta.metaTags);
@@ -71,11 +72,6 @@ router.beforeEach((to, from, next) => {
     .forEach((tag) => document.head.appendChild(tag));
 
   next();
-});
-
-const router = new VueRouter({
-  mode: "history",
-  routes,
 });
 
 new Vue({
