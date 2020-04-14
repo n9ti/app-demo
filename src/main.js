@@ -8,16 +8,28 @@ Vue.use(VueRouter);
 Vue.config.productionTip = false;
 
 const routes = [
-  { path: "/", component: RegisterPage },
-  { path: "/success", component: SuccessPage }
+  {
+    path: "/",
+    component: RegisterPage,
+    meta: {
+      title: "Register Page",
+    },
+  },
+  {
+    path: "/success",
+    component: SuccessPage,
+    meta: {
+      title: "Success Page",
+    },
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
-  routes
+  routes,
 });
 
 new Vue({
   router,
-  render: h => h(App)
+  render: (h) => h(App),
 }).$mount("#app");
