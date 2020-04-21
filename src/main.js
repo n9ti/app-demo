@@ -3,6 +3,15 @@ import App from "./App.vue";
 import VueRouter from "vue-router";
 import RegisterPage from "./pages/RegisterPage.vue";
 import SuccessPage from "./pages/SuccessPage.vue";
+import VueGtag from "vue-gtag";
+
+Vue.use(VueGtag, {
+  config: { id: "UA-163580229-1" },
+  params: {
+    send_page_view: false,
+  },
+  bootstrap: false,
+});
 
 Vue.use(VueRouter);
 Vue.config.productionTip = false;
