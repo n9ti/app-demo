@@ -30,6 +30,7 @@ export default {
     enablePlugin() {
       bootstrap().then((gtag) => {
         console.log("gtag bootstraping success");
+        console.log(gtag);
         this.track();
       });
     },
