@@ -24,7 +24,7 @@ import { bootstrap } from "vue-gtag";
 export default {
   name: "SuccessPage",
   mounted() {
-    // this.enablePlugin();
+    this.enablePlugin();
   },
   methods: {
     enablePlugin() {
