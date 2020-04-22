@@ -6,9 +6,15 @@ import SuccessPage from "./pages/SuccessPage.vue";
 import VueGtag from "vue-gtag";
 
 Vue.use(VueGtag, {
-  config: { id: "UA-163580229-1" },
-  params: {
-    send_page_view: false,
+  config: {
+    id: "UA-163580229-1",
+    params: {
+      send_page_view: false,
+    },
+    linker: {
+      accept_incoming: true,
+      domains: ["ga-landing.netlify.app"],
+    },
   },
   bootstrap: false,
 });
