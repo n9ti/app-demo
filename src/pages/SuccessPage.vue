@@ -1,13 +1,13 @@
 <template>
   <main>
-    <!-- <noscript
+    <noscript
       ><iframe
         src="https://ga-landing.netlify.com/thank-indirect"
         height="0"
         width="0"
         style="display:none;visibility:hidden"
       ></iframe
-    ></noscript> -->
+    ></noscript>
     <header>
       <h1>Success</h1>
       <h1>Thank you</h1>
